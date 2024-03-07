@@ -12,7 +12,7 @@ class SerialWindowsServerUSB extends SerialServer {
       int parity = SerialPortParity.none,
       int stopBits = 1,
       int bits = 8})
-      : _client = SerialWindowsMasterUSB(name,
+      : _client = SerialWindowsClientUSB(name,
             baudRate: baudRate, parity: parity, stopBits: stopBits, bits: bits);
   @override
   Future<bool> bind() async {
