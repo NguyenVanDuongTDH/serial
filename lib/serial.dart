@@ -6,8 +6,6 @@ library;
 export 'src/tcp_server.dart' show SerialServerTCP;
 export 'src/tcp_client.dart' show SerialClientTCP;
 export 'src/serial.dart' show SerialClient, SerialServer;
-export 'src/windows_usb_serial.dart' show SerialWindowsUSB;
+export 'src/windows_usb_serial.dart' show SerialWindowsMasterUSB;
+export 'src/windows_usb_serial_slave.dart' show SerialWindowsServerUSB;
 export 'package:libserialport/libserialport.dart' show SerialPortParity;
-
-
-// TODO: Export any libraries intended for clients of this package.

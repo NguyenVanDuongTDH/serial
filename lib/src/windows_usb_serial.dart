@@ -6,17 +6,16 @@ import 'package:libserialport/libserialport.dart';
 import 'package:serial/serial.dart';
 import 'package:serial/src/serial.dart';
 
-class SerialWindowsUSB extends SerialClient {
+class SerialWindowsMasterUSB extends SerialClient {
   SerialPort? _serialPort;
   SerialPortReader? _reader;
-  List<int> _bytes = [];
   String _name;
   int _baudRate;
   int _parity;
   int _stopBits;
   int _bits;
 
-  SerialWindowsUSB(String name,
+  SerialWindowsMasterUSB(String name,
       {int baudRate = 9600,
       int parity = SerialPortParity.none,
       int stopBits = 1,
@@ -51,9 +50,7 @@ class SerialWindowsUSB extends SerialClient {
         ..parity = _parity
         ..setFlowControl(SerialPortFlowControl.none);
       _reader = SerialPortReader(_serialPort!);
-      _reader!.stream.listen((data) {
-        _bytes.addAll(data);
-      });
+    
 
       return true;
     } catch (e) {
