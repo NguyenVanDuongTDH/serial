@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:serial/src/serial.dart';
 
 class SerialClientTCP extends SerialClient {
+  bool _connected = false;
   Socket? _socket;
   String _host = "";
   int _port = 502;
@@ -45,4 +46,8 @@ class SerialClientTCP extends SerialClient {
   void add(Uint8List datas) {
     _socket!.add(datas);
   }
+  
+  @override
+  // TODO: implement connected
+  bool get connected => throw UnimplementedError();
 }
