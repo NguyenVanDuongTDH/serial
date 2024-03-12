@@ -4,6 +4,8 @@ import 'dart:async';
 
 import 'package:serial/serial.dart';
 
+import 'windows_usb_serial.dart';
+
 class SerialWindowsServerUSB extends SerialServer {
   SerialClient _client;
   StreamController<SerialClient>? _controller;
