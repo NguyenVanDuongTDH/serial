@@ -4,5 +4,5 @@
 library;
 
 export 'src/serial.dart'
-    show SerialClient, SerialServer, Serial_Ex,Serial, Client_Ex, Server_Ex;
+    show SerialClient, SerialServer, SerialClientTCP;
 export 'package:libserialport/libserialport.dart' show SerialPortParity;
