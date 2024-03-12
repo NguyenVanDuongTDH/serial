@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:serial/serial.dart';
+import 'package:serial/src/serial.dart';
 
 import 'windows_usb_serial.dart';
 
